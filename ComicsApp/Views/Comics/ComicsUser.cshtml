@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ComicsApp.Models.Comic>
+
+@{
+    ViewData["Title"] = "ComicsUser";
+}
+
+@*<h1>ComicsUser</h1>*@
+
+@*<form asp-controller="Comics" asp-action="Index" method="get">
+    <p>
+        Comic: <input type="text" name="id" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>*@
+
+<head>
+	<link rel="stylesheet" href="~/css/comicuser.css" asp-append-version="true" />
+</head>
+
+
+@foreach (var item in Model) {
+       @* <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComicName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+      
+            <td>
+                @Html.DisplayFor(modelItem => item.URL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComicCreated)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Author.AuthorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher.PublisherId)
+            </td>*@
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.ComicId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ComicId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ComicId">Delete</a>
+            </td>
+        @*</tr>*@
+
+
+         <h1>
+       Comic:@Html.DisplayFor(modelItem => item.ComicName)
+        </h1> 
+      <div>   
+        <h2>
+         Author:@Html.DisplayFor(modelItem => item.Author.AuthorFirstname)
+            @Html.DisplayFor(modelItem => item.Author.AuthorLastname)
+        </h2>
+        <h3>Publisher:@Html.DisplayFor(modelItem => item.Publisher.PublisherName)</h3>
+      </div> 
+
+       <div>
+         <p>
+            Description:@Html.DisplayFor(modelItem => item.Description)
+        </p>
+         <img class="d-block w-100" src="@Html.DisplayFor(modelItem => item.URL)" >
+       </div>
+        
+}

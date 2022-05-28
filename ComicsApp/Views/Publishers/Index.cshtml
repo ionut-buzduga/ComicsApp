@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ComicsApp.Models.Publisher>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Manage Publishers</h1>
+
+<head>
+	<link rel="stylesheet" href="~/css/crudstyles.css" asp-append-version="true" />
+</head>
+
+
+<p>
+    <a asp-action="Create">Create New Publisher</a>
+</p>
+<table class="table table-striped table-hover  table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PublisherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublisherCountry)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublisherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublisherCountry)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PublisherId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PublisherId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PublisherId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+﻿
+.button {
+    background-color: darkred;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 30px;
+    min-width: 120px;
+}
+
+h1 {
+    text-align: center;
+}
+
+

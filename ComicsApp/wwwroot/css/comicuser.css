@@ -1,0 +1,53 @@
+﻿#container {
+    height: 200px;
+    width: 240px;
+    place-items: stretch; /* You can change this value by selecting another option in the list */
+    background-color: #8c8c8c;
+    display: flex;
+}
+
+div {
+    clear: both;
+}
+
+h1 {
+    font-size: 48px;
+    text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+    font-family: "Segoe print", Arial, Helvetica, sans-serif;
+    color: #dd0000;
+    padding: 0 0 0 0;
+    margin-left: 30px;
+    margin: 16px auto;
+    font-weight: lighter;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    display: block;
+    min-height: 172px;
+    min-width: 800;
+    max-height: 172px;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 48px;
+    color: #f8f8f8;
+    float: left;
+}
+
+h3 {
+    font-size: 48px;
+    color: #f8f8f8;
+    float: right;
+}
+
+
+p {
+    color: #f8f8f8;
+    font-family: 'Raleway',sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 0 0 24px;
+}

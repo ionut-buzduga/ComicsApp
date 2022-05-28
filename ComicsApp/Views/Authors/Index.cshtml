@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ComicsApp.Models.Author>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+	<link rel="stylesheet" href="~/css/crudstyles.css" asp-append-version="true" />
+</head>
+<h1>Manage Authors</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+
+<table class="table table-striped table-hover  table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorFirstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorLastname)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorFirstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorLastname)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AuthorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AuthorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AuthorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+﻿
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: darkred;
+}
+
+p {
+    font-size: 2vw;
+}
